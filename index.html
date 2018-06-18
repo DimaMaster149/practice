@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="header">Weather in your city</div>
+			</div>
+			<div class="col-md-12 search-wrapper">
+				<div class="search">
+					<div class="inline-block">
+						<label class="label1">Enter your city</label>
+						<div class="city-wrapper">
+							<input type="text" class="form-control" id="city" placeholder="Enter city" autofocus>
+						</div>
+					</div>
+					<div class="inline-block">
+						<label class="label2">Choose date</label>
+						<div class="datepicker-wrapper">
+							<div class='input-group date' id='datetimepicker'>
+								<input type='text' class="form-control" placeholder="Choose date" />
+								<span class="input-group-addon">
+									<span class="glyphicon glyphicon-calendar"></span>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="btn-wrapper inline-block">
+						<button class="form-control btn btn-default btn-send"><i class="fas fa-search"></i> Search</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-12">
+				<div id="cityName">
+					<span>Weather forecast in </span>
+					<span class="cityName"></span>
+				</div>
+			</div>
+
+			<div class="col-md-12 table-wrapper">
+				<table id="weather-table">
+					<h2></h2>
+					<thead>
+						<tr>
+							<th></th>
+							<th class="day-of-week">today</th>
+							<th class="day-of-week"></th>
+							<th class="day-of-week"></th>
+							<th class="day-of-week"></th>
+							<th class="day-of-week"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td></td>
+							<td class="day-month"></td>
+							<td class="day-month"></td>
+							<td class="day-month"></td>
+							<td class="day-month"></td>
+							<td class="day-month"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td class="weather-icon"></td>
+							<td class="weather-icon"></td>
+							<td class="weather-icon"></td>
+							<td class="weather-icon"></td>
+							<td class="weather-icon"></td>
+						</tr>
+						<tr>
+							<td>Morning</td>
+							<td class="morn-temp"></td>
+							<td class="morn-temp"></td>
+							<td class="morn-temp"></td>
+							<td class="morn-temp"></td>
+							<td class="morn-temp"></td>
+						</tr>
+						<tr>
+							<td>Day</td>
+							<td class="day-temp"></td>
+							<td class="day-temp"></td>
+							<td class="day-temp"></td>
+							<td class="day-temp"></td>
+							<td class="day-temp"></td>
+						</tr>
+						<tr>
+							<td>Evening</td>
+							<td class="even-temp"></td>
+							<td class="even-temp"></td>
+							<td class="even-temp"></td>
+							<td class="even-temp"></td>
+							<td class="even-temp"></td>
+						</tr>
+						<tr>
+							<td>Night</td>
+							<td class="night-temp"></td>
+							<td class="night-temp"></td>
+							<td class="night-temp"></td>
+							<td class="night-temp"></td>
+							<td class="night-temp"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-12">
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/moment.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBZQv1M03osi6gzfvBAn-Et01rzueu_gRs"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
